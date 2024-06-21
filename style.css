@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+nav{
+    display:flex;
+    padding:0px 60px;
+    justify-content: space-between;
+    align-items:center;
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 0);
+}
+nav logo{
+    font-size:20px;
+    font-weight: bold;
+    font-family: dancing script;
+    float:left;
+}
+nav ul{
+    display:flex;
+}
+nav ul li{
+    position: relative;
+    list-style:none;
+}
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color:rgb(255, 69, 0);
+    padding: 15px;
+    display:block;
+}
+nav ul li a:hover{
+    color:rgb(138, 43, 226);
+    font-weight: bold;
+}
+.checkbtn{
+    font-size: 20px;
+    color:white;
+    float:right;
+    line-height: 60px;
+    margin-right: 30px;
+    display:none;
+}
+#check{
+    display:none;
+}
+.dropdown{
+    display:none;
+}
+nav ul li:hover .dropdown{
+    color:rgb(165, 42, 42);
+    display: block;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    left:0;
+    top:100%;
+    font-size: 15px;
+    padding:0px 10px; 
+}
+nav ul li .dropdown ul li :hover{
+    color:rgb(134, 129, 129);
+}
+nav ul li .dropdown ul{
+    display:block;
+}
+.dropdown ul li{
+    width:100px;
+}
+
+.overlay{
+    display: flex;
+    height: 100vh;
+    background-image:url(https://www.pixelstalk.net/wp-content/uploads/2016/03/Colorful-flowers-wallpaper-hd-images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.overlay p{
+    margin-top: 30px;
+    color:rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 30px;
+}
+@media screen and (max-width:900px){
+    nav logo{
+        font-size: 20px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    .overlay{
+        height:50vh;
+        width: 100%;
+        background-size: cover;
+    }
+    .overlay p{
+        font-size:20px ;
+    }
+}
+@media screen and (max-width:700px){
+    .checkbtn{
+        display: block;
+    }
+    nav{
+        padding: 10px 10px;
+    }
+    nav h1{
+        font-size: 20px;
+    }
+   
+    nav ul{
+        position: fixed;
+        display: block;
+        font-size: 10px;
+        width: 100%;
+        padding: 10px;
+        min-height: 10px;
+        margin-top: 50px;
+        top: -100%;
+        left: 0;
+        text-align: center;
+        background-color: rgb(80, 75, 75);
+        transition: top .8s;
+    }
+    #check:checked~ul{
+        top: 0px;
+    }
+    nav ul li{
+        margin: 10px;
+    }
+    .overlay{
+        height:70vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    .overlay p{
+        font-size:25px ;
+        /* margin-left:-60px; */
+        text-align: center;
+    }
+    nav ul li:hover .drop-down {
+       position: absolute;
+        width:30%;
+         left : 250px;
+         top:-50px;
+        background-color: rgb(90, 89, 89);
+    }
+    nav ul li:hover .drop-down li a{
+        display:block;
+    }
+    
+  
+}
